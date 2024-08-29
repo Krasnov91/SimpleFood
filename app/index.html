@@ -1,13 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>SimpleFood</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
-  
+  <header class="header">
+    <div class="container">
+      <div class="header__top">
+        <nav class="menu">
+          <a class="logo" href="#">
+            <img class="logo__img" src="images/logo.png" alt="логотип">
+          </a>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link menu__link--active" href="#">
+                Главная
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">
+                Блюда
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__user">
+          <a class="header__user-link header__user-link--search" href="#"></a>
+          <a class="header__user-link header__user-link--buy" href="#">
+            <span class="header__user-num">1</span>
+          </a>
+        </div>
+      </div>
+      <div class="header__content" style="background-image: url('images/header-img.png');">
+        <h1 class="header__title">Доставка
+          <span class="header__subtitle">за 15 минут</span>
+        </h1>
+        <p class="header__text">
+          Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш счёт
+        </p>
+        <a class="main-btn header__btn" href="#">
+          Заказать
+        </a>
+        <a class="details-btn header__btn" href="#">
+          Подробнее
+        </a>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <section class="category">
+      <div class="container">
+        <h2 class="section__title">
+          Популярные категории
+        </h2>
+        .categoty
+      </div>
+    </section>
+
+
+  </main>
+
   <script src="js/main.min.js"></script>
 </body>
+
 </html>
