@@ -208,7 +208,7 @@
 }
 
 .category {
-  padding-top: 120px;
+  padding: 120px 0 400px;
 
   &__title {
     margin-bottom: 60px;
@@ -329,8 +329,13 @@
 }
 
 .footer {
-  padding-top: 120px;
+  padding-top: 60px;
   white-space: nowrap;
+  position: fixed;
+  bottom: 0;
+  left: 0;right: 0;
+  background-color: $white;
+  opacity: 0.95;
 
   &__top {
     display: flex;
