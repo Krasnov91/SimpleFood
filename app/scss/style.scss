@@ -40,6 +40,20 @@
 
   &__logo {
     margin-right: auto;
+    padding: 6px 2px 2px;
+    border-radius: 5px;
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
   }
 
   &__list {
@@ -333,7 +347,8 @@
   white-space: nowrap;
   position: fixed;
   bottom: 0;
-  left: 0;right: 0;
+  left: 0;
+  right: 0;
   background-color: $white;
   opacity: 0.95;
 
