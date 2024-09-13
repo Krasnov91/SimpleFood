@@ -12,7 +12,7 @@
   }
 
   &__inner {
-    padding: 58px 0;
+    padding: 56px 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -35,7 +35,7 @@
 
   &__list {
     display: flex;
-    margin-right: 63px;
+    margin-right: 52px;
   }
 
   &__item:not(:last-child) {
@@ -128,7 +128,7 @@
   padding-bottom: 60px;
 
   &__content {
-    padding: 155px 0;
+    padding: 165px 0;
     @extend %bg-image;
     background-position: center right;
     @extend %dflexfdcolumn;
@@ -138,7 +138,7 @@
     text-transform: uppercase;
     font-size: 66px;
     line-height: 1.3;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     @extend %rubik-500;
   }
 
@@ -226,7 +226,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate(60%, 30%);
+    transform: translate(75%, 30%);
     fill: $title;
   }
 
@@ -238,6 +238,7 @@
   }
 
   &__button {
+    margin: 0 auto;
 
     &:focus {
       text-decoration: underline;
@@ -268,7 +269,7 @@
   }
 
   &__img {
-    margin-bottom: 10px;
+    margin-bottom: 7px;
   }
 
   &__title {
@@ -296,15 +297,16 @@
 
 .description {
   &__inner {
+    height: 583px;
     @extend %bg-image;
     background-position: left center;
+    margin: 0 70px;
   }
 
   &__content {
-    padding: 60px 0;
+    padding: 57px 0;
     max-width: 470px;
     width: 100%;
-    margin-right: 70px;
     margin-left: auto;
   }
 
@@ -312,10 +314,13 @@
     text-align: left;
   }
 
-  &__list,
   &__title,
   &__text {
     margin-bottom: 30px;
+  }
+
+  &__list {
+    margin-bottom: 37px;
   }
 
   &__item {
@@ -452,22 +457,23 @@
 }
 
 .reviews {
+  margin-bottom: 38px;
+
   &__title {
     margin-bottom: 45px;
   }
 
-  &__slider {
-    display: flex;
-  }
-
   &__item {
+    max-width: 990px;
+    width: 100%;
     display: flex;
-    justify-content: center;
+    margin: 0 auto;
+    justify-content: space-between;
     margin-bottom: 48px;
   }
 
   &__img {
-    margin-right: 80px;
+    margin-right: auto;
   }
 
   &__content {
@@ -475,6 +481,7 @@
     justify-content: center;
     max-width: 570px;
     width: 100%;
+    margin-right: 40px;
   }
 
   &__blockquote {
@@ -519,11 +526,11 @@
 
   .slick-arrow {
     position: absolute;
-    bottom: -10px;
+    bottom: -36px;
     border: 3px solid $decorate;
     color: transparent;
-    width: 34px;
-    height: 34px;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
     z-index: 4;
     font-size: 0;
@@ -564,10 +571,8 @@
   }
 
   .slick-prev {
-    width: 34px;
-    height: 34px;
     left: 50%;
-    transform: translateX(-110px);
+    transform: translateX(-112px);
   }
 
   .slick-next {
@@ -577,7 +582,7 @@
 
   .slick-dots {
     position: absolute;
-    bottom: 0;
+    bottom: -25px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -681,12 +686,12 @@
 
   &__menu {
     display: grid;
-    gap: 20px 70px;
+    gap: 0 75px;
     grid-template-columns: repeat(3, auto);
     margin-right: 70px;
     white-space: nowrap;
     font-size: 18px;
-    line-height: 1.3;
+    line-height: 1;
   }
 
   &__link {
@@ -694,13 +699,9 @@
     white-space: nowrap;
   }
 
-  &__item {
-    margin-bottom: 15px;
-  }
-
   &__bottom {
     text-align: center;
-    padding: 30px 0;
+    padding: 15px 0;
     font-size: 14px;
   }
 }
