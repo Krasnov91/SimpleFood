@@ -1,39 +1,59 @@
-$dark:        #31352b;
-$orange:      #ff6838;
-$dark-blue:   #363853;
-$white:       #ffffff;
-$silver-100:  #F9FAFF;
-$active-icon: #FFF2ED;
-$silver-200:  #ECECEC;
-$grey:        #C2C2C2;
+$text:          #31352b;
+$btn:           #ff6838;
+$title:         #363853;
+$white:         #ffffff;
+$main-bg:       #F9FAFF;
+$active-btn:    #FF7A50;
+$active-icon:   #FFF2ED;
+$icon-bg:       #ECECEC;
+$decorate:      #C2C2C2;
+$icon-delivery: #00AAFF;
+$icon-restaurant: #ff2222;
+$dots-hover:    #FFAE94;
 
 
 %rubik-300 {
-  font-family: 'Rubik light', sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-weight: 300;
 }
 
 %rubik-400 {
-  font-family: 'Rubik Regular', sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-weight: 400;
 }
 
 %rubik-500 {
-  font-family: 'Rubik Medium', sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-weight: 500;
 }
 
 %rubik-italic {
-  font-family: 'Rubik Italic', sans-serif;
+  font-family: 'Rubik', sans-serif;
 }
 
-%OpenSans-600 {
-  font-family: 'OpenSans-SemiBold', sans-serif;
-  font-weight: 600;
+%dflexjcsb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-%RobotoCondensed-400 {
-  font-family: 'RobotoCondensed-Regular', sans-serif;
-  font-weight: 400;
+%dflexfdcolumn {
+  display: flex;
+  flex-direction: column;
 }
+
+%bg-image {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+// %OpenSans-600 {
+//   font-family: 'OpenSans-SemiBold', sans-serif;
+//   font-weight: 600;
+// }
+
+// %RobotoCondensed-400 {
+//   font-family: 'RobotoCondensed-Regular', sans-serif;
+//   font-weight: 400;
+// }
 

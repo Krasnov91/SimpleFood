@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Rubik light';
+  font-family: 'Rubik';
   font-weight: 300;
   font-style: normal;
   src: local('Rubik-Light'),
@@ -9,7 +9,7 @@
 }
 
 @font-face {
-  font-family: 'Rubik Regular';
+  font-family: 'Rubik';
   font-weight: 400;
   font-style: normal;
   src: local('Rubik-Regular'),
@@ -19,41 +19,41 @@
 }
 
 @font-face {
-  font-family: 'Rubik Medium';
+  font-family: 'Rubik';
   font-weight: 500;
   font-style: normal;
   src: local('Rubik-Medium'),
-    url('fonts/Rubik-Medium.woff2') format('woff2'),
-    url('fonts/Rubik-Medium.woff') format('woff');
+    url('../fonts/Rubik-Medium.woff2') format('woff2'),
+    url('../fonts/Rubik-Medium.woff') format('woff');
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Rubik Italic';
+  font-family: 'Rubik';
   font-weight: 400;
-  font-style: normal;
+  font-style: italic;
   src: local('Rubik-Italic'),
     url('../fonts/Rubik-Italic.woff2') format('woff2'),
     url('../fonts/Rubik-Italic.woff') format('woff');
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'OpenSans-SemiBold';
-  font-weight: 600;
-  font-style: normal;
-  src: local('OpenSans-SemiBold'),
-    url('../fonts/OpenSans-SemiBold.woff2') format('woff2'),
-    url('../fonts/OpenSans-SemiBold.woff') format('woff');
-  font-display: swap;
-}
+// @font-face {
+//   font-family: 'OpenSans-SemiBold';
+//   font-weight: 600;
+//   font-style: normal;
+//   src: local('OpenSans-SemiBold'),
+//     url('../fonts/OpenSans-SemiBold.woff2') format('woff2'),
+//     url('../fonts/OpenSans-SemiBold.woff') format('woff');
+//   font-display: swap;
+// }
 
-@font-face {
-  font-family: 'RobotoCondensed-Regular';
-  font-weight: 400;
-  font-style: normal;
-  src: local('RobotoCondensed-Regular'),
-    url('../fonts/RobotoCondensed-Regular.woff2') format('woff2'),
-    url('../fonts/RobotoCondensed-Regular.woff') format('woff');
-  font-display: swap;
-}
+// @font-face {
+//   font-family: 'RobotoCondensed-Regular';
+//   font-weight: 400;
+//   font-style: normal;
+//   src: local('RobotoCondensed-Regular'),
+//     url('../fonts/RobotoCondensed-Regular.woff2') format('woff2'),
+//     url('../fonts/RobotoCondensed-Regular.woff') format('woff');
+//   font-display: swap;
+// }

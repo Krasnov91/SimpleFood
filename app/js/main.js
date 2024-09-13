@@ -15,6 +15,20 @@ $(function () {
     else sticky.removeClass('header__inner--fixed');
   });
 
+  $('.reviews__slider').slick({
+    dots:true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+
+    arrows: true,
+    speed: 1000,
+
+    prevArrow: '<button type="button" class="slick-arrow slick-prev"><svg class="slick-arrow__svg"><use xlink:href="images/sprite.svg#icon-arrow"></use></svg></button>',
+    nextArrow: '<button type="button" class="slick-arrow slick-next"><svg class="slick-arrow__svg"><use xlink:href="images/sprite.svg#icon-arrow"></use></svg></button>',
+    // appendArrows: '.arrows-wrap'
+
+  });
+  
 });
 
-var mixer = mixitup('.category__inner');
+var mixer = mixitup('.category-popular__inner');
