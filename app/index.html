@@ -22,23 +22,82 @@
           <a class="logo header__logo" href="#header">
             <img class="logo__svg" src="images/icons/icon-logo.svg" alt="логотип" width="200" height="39">
           </a>
-          <ul class="menu__list">
-            <li class="menu__item">
-              <a class="menu__link menu__link--active" href="#header">
-                Главная
-              </a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#category">
-                Блюда
-              </a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#contacts">
-                Контакты
-              </a>
-            </li>
-          </ul>
+          <div class="menu__wrap">
+            <a class="menu__logo" href="#header">
+              <img class="menu__svg" src="images/icons/icon-logo.svg" alt="логотип" width="200" height="39">
+            </a>
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link menu__link--active" href="#header">
+                  Главная
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#category">
+                  Блюда
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#contacts">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+            <address class="header__contacts contacts" id="contacts">
+              <ul class="contacts__adress">
+                <li class="contacts__item">
+                  <a class="contacts__link" href="#">
+                    <svg class="contacts__svg">
+                      <use xlink:href="images/sprite.svg#icon-location"></use>
+                    </svg>
+                    ул. Т.Г.Шевченко, 1
+                  </a>
+                </li>
+                <li class="contacts__item">
+                  <a class="contacts__link" href="tel:380501112233">
+                    <svg class="contacts__svg">
+                      <use xlink:href="images/sprite.svg#icon-calling"></use>
+                    </svg>
+                    380501112233
+                  </a>
+                </li>
+                <li class="contacts__item">
+                  <a class="contacts__link" href="mailto:support@sfood.com">
+                    <svg class="contacts__svg">
+                      <use xlink:href="images/sprite.svg#icon-message"></use>
+                    </svg>
+                    support@sfood.com
+                  </a>
+                </li>
+              </ul>
+              <ul class="socials-contacts">
+                <li class="socials-contacts__item">
+                  <a class="socials-contacts__link icon-animation" href="#">
+                    <div class="sr-only">ссылка для перехода в фэйсбук</div>
+                    <svg class="socials-contacts__svg">
+                      <use xlink:href="images/sprite.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials-contacts__item">
+                  <a class="socials-contacts__link icon-animation" href="#">
+                    <div class="sr-only">ссылка для перехода в твиттер</div>
+                    <svg class="socials-contacts__svg">
+                      <use xlink:href="images/sprite.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials-contacts__item">
+                  <a class="socials-contacts__link icon-animation" href="#">
+                    <div class="sr-only">ссылка для перехода в инстаграмм</div>
+                    <svg class="socials-contacts__svg">
+                      <use xlink:href="images/sprite.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </address>
+          </div>
           <div class="user-info">
             <div class="sr-only">иконка поиска</div>
             <button class="user-info__link user-info__link--search icon-animation" type="button">
@@ -54,6 +113,10 @@
               <span class="user-info__num">1</span>
             </button>
           </div>
+          <button class="burger-menu">
+            <span class="burger-menu__line"></span>
+            <span class="sr-only">Открыть меню</span>
+          </button>
         </nav>
       </div>
     </div>
@@ -62,27 +125,30 @@
   <main class="main">
     <section class="hero">
       <div class="container">
-        <div class="hero__content" style="background-image: url('images/hero-img.png');">
-          <h1 class="sr-only">быстрая доставка вкуснейшей еды</h1>
-          <h2 class="hero__title">Доставка
-            <span class="hero__subtitle">за 15 минут</span>
-          </h2>
-          <p class="hero__text">
-            Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш счёт
-          </p>
-          <div class="hero__wrap">
-            <a class="hero__link-order main-btn animation-btn" href="#">
-              Заказать
-            </a>
-            <a class="hero__link add-btn add-animation" href="#">
-              Подробнее
-            </a>
+        <div class="hero__inner df">
+          <div class="hero__content">
+            <h1 class="sr-only">быстрая доставка вкуснейшей еды</h1>
+            <h2 class="hero__title">Доставка
+              <span class="hero__subtitle">за 15 минут</span>
+            </h2>
+            <p class="hero__text">
+              Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш счёт
+            </p>
+            <div class="hero__wrap">
+              <a class="hero__link-order main-btn animation-btn" href="#">
+                Заказать
+              </a>
+              <a class="hero__link add-btn add-animation" href="#">
+                Подробнее
+              </a>
+            </div>
           </div>
+          <img class="hero__img" src="images/hero-img.png" alt="картинка курьера" width="560" height="660">
         </div>
       </div>
     </section>
 
-    <section class="category-popular section" id="category">
+    <!-- <section class="category-popular section" id="category">
       <div class="container">
         <h2 class="title category-popular__title">
           Популярные категории
@@ -227,7 +293,8 @@
 
     <section class="description section">
       <div class="container">
-        <div class="description__inner" style="background-image: url('images/delivery.png');">
+        <div class="description__inner df">
+          <img class="description__img" src="images/delivery.png" alt="изображение курьера" width="440" height="585">
           <div class="description__content">
             <h2 class="description__title title">
               Оставайтесь дома,
@@ -262,9 +329,9 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section class="restaurants section">
+    <!-- <section class="restaurants section">
       <div class="container">
         <h2 class="restaurants__title title">
           Лучшие рестораны
@@ -392,9 +459,9 @@
           </article>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section class="reviews section">
+    <!-- <section class="reviews section">
       <div class="container">
         <h2 class="reviews__title title">
           Отзывы клиентов
@@ -407,10 +474,10 @@
                 <blockquote class="reviews__blockquote">
                   <p class="reviews__text">
                     SimpleFood - одна из лучших служб доставки продуктов из ресторанов в городе. Очень удобный сайт и
-                  приложение. Их
-                  доставщики очень вежливы и пунктуальны. Компания часто проводит акции и дарит скидки на доставку -
-                  однозначно
-                  рекомендую!
+                    приложение. Их
+                    доставщики очень вежливы и пунктуальны. Компания часто проводит акции и дарит скидки на доставку -
+                    однозначно
+                    рекомендую!
                   </p>
                 </blockquote>
                 <figcaption class="reviews__figcaption">
@@ -482,9 +549,9 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section class="download section">
+    <!-- <section class="download section">
       <div class="container">
         <div class="download__inner df">
           <div class="download__content df">
@@ -497,10 +564,12 @@
             </p>
             <div class="download__sources">
               <a class="download__link" href="#">
-                <img class="download__img" src="images/appstore.svg" alt="ссылка для скачивания через эплстор" width="120" height="40">
+                <img class="download__img" src="images/appstore.svg" alt="ссылка для скачивания через эплстор"
+                  width="120" height="40">
               </a>
               <a class="download__link" href="#">
-                <img class="download__img" src="images/googleplay.svg" alt="ссылка для скачивания через гуглплэй" width="135" height="40">
+                <img class="download__img" src="images/googleplay.svg" alt="ссылка для скачивания через гуглплэй"
+                  width="135" height="40">
               </a>
             </div>
           </div>
@@ -508,11 +577,11 @@
             width="570" height="380">
         </div>
       </div>
-    </section>
+    </section> -->
 
   </main>
 
-  <footer class="footer">
+  <!-- <footer class="footer">
     <div class="container">
       <div class="footer__top">
         <div class="footer__inner">
@@ -626,7 +695,7 @@
       </div>
     </div>
     <div class="footer__bottom">© 2022 Simple Food</div>
-  </footer>
+  </footer> -->
 
 
   <script src="js/main.min.js"></script>

@@ -1,5 +1,10 @@
 $(function () {
 
+  $('.burger-menu, .menu__list-link').on('click', function () {
+    $('.menu__wrap').toggleClass('menu__wrap--active');
+    $('body').toggleClass('lock');
+  });
+
   $(".header__link, .logo").on("click", function (e) {
     e.preventDefault();
     var id = $(this).attr('href'),
