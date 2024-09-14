@@ -1,7 +1,7 @@
 $(function () {
 
-  $('.burger-menu, .menu__list-link').on('click', function () {
-    $('.menu__wrap').toggleClass('menu__wrap--active');
+  $('.burger-menu, .menu__close').on('click', function () {
+    $('.menu__mobile').toggleClass('menu__mobile--active');
     $('body').toggleClass('lock');
   });
 
@@ -21,7 +21,7 @@ $(function () {
   });
 
   $('.reviews__slider').slick({
-    dots:true,
+    dots: true,
     slidesToShow: 1,
     slidesToScroll: 1,
 
@@ -33,7 +33,7 @@ $(function () {
     // appendArrows: '.arrows-wrap'
 
   });
-  
+
 });
 
 var mixer = mixitup('.category-popular__inner');
