@@ -1,16 +1,23 @@
-$text:          #31352b;
-$btn:           #ff6838;
-$title:         #363853;
-$white:         #ffffff;
-$main-bg:       #F9FAFF;
-$active-btn:    #FF7A50;
-$active-icon:   #FFF2ED;
-$icon-bg:       #ECECEC;
-$decorate:      #C2C2C2;
-$icon-delivery: #00AAFF;
-$icon-restaurant: #ff2222;
-$dots-hover:    #FFAE94;
-$border:        #EEEFF3;
+$text:           #31352b;
+$btn:            #ff6838;
+$title:          #363853;
+$white:          #ffffff;
+$main-bg:        #F9FAFF;
+$active-btn:     #FF7A50;
+$active-icon:    #FFF2ED;
+$icon-bg:        #ECECEC;
+$decorate:       #C2C2C2;
+$icon-delivery:  #00AAFF;
+$icon-restaurant:#ff2222;
+$dots-hover:     #FFAE94;
+$border:         #EEEFF3;
+
+$breakpoints: (
+  "phone": 560px,
+  "tablet": 768px,
+  "tablet-2": 992px,
+  "desktop": 1200px
+);
 
 
 %rubik-300 {
@@ -45,7 +52,8 @@ $border:        #EEEFF3;
 
 %bg-image {
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
 }
 
 // %OpenSans-600 {
