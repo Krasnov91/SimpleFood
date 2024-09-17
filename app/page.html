@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Главная</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon//favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon//favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header class="header" id="header">
+    <div class="header__inner">
+      <div class="container">
+        <nav class="menu">
+          <a class="logo header__logo" href="#header">
+            <img class="logo__svg" src="images/icons/icon-logo.svg" alt="логотип" width="200" height="39">
+          </a>
+          <div class="menu__mobile">
+            <div class="menu__head df">
+              <a class="menu__logo" href="#header">
+                <img class="menu__svg" src="images/icons/icon-logo.svg" alt="логотип" width="200" height="39">
+              </a>
+              <button class="menu__close" type="menu">
+                <span class="sr-only">Закрыть меню</span>
+                <svg class="menu__close-svg">
+                  <use xlink:href="images/sprite.svg#icon-close"></use>
+                </svg>
+              </button>
+            </div>
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link add-animation menu__link--active" href="#header">
+                  Главная
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link add-animation" href="#category">
+                  Блюда
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link add-animation" href="#contacts">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+            <address class="header__contacts contacts" id="contacts">
+              <ul class="contacts__adress">
+                <li class="contacts__item">
+                  <a class="contacts__link" href="#">
+                    <svg class="contacts__svg">
+                      <use xlink:href="images/sprite.svg#icon-location"></use>
+                    </svg>
+                    ул. Т.Г.Шевченко, 1
+                  </a>
+                </li>
+                <li class="contacts__item">
+                  <a class="contacts__link" href="tel:380501112233">
+                    <svg class="contacts__svg">
+                      <use xlink:href="images/sprite.svg#icon-calling"></use>
+                    </svg>
+                    380501112233
+                  </a>
+                </li>
+                <li class="contacts__item">
+                  <a class="contacts__link" href="mailto:support@sfood.com">
+                    <svg class="contacts__svg">
+                      <use xlink:href="images/sprite.svg#icon-message"></use>
+                    </svg>
+                    support@sfood.com
+                  </a>
+                </li>
+              </ul>
+              <ul class="socials-contacts">
+                <li class="socials-contacts__item">
+                  <a class="socials-contacts__link icon-animation" href="#">
+                    <span class="sr-only">ссылка для перехода в фэйсбук</span>
+                    <svg class="socials-contacts__svg">
+                      <use xlink:href="images/sprite.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials-contacts__item">
+                  <a class="socials-contacts__link icon-animation" href="#">
+                    <span class="sr-only">ссылка для перехода в твиттер</span>
+                    <svg class="socials-contacts__svg">
+                      <use xlink:href="images/sprite.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials-contacts__item">
+                  <a class="socials-contacts__link icon-animation" href="#">
+                    <span class="sr-only">ссылка для перехода в инстаграмм</span>
+                    <svg class="socials-contacts__svg">
+                      <use xlink:href="images/sprite.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </address>
+          </div>
+          <ul class="user-info">
+            <li class="user-info__item">
+              <button class="user-info__link user-info__link--search icon-animation" type="button">
+                <svg class="user-info__svg">
+                  <use xlink:href="images/sprite.svg#icon-search"></use>
+                </svg>
+                <span class="sr-only">кнопка для поиска</span>
+              </button>
+            </li>
+            <li class="user-info__item">
+              <button class="user-info__link user-info__link--buy icon-animation" type="button">
+                <svg class="user-info__svg">
+                  <use xlink:href="images/sprite.svg#icon-buy"></use>
+                </svg>
+                <span class="sr-only">кнопка для покупок</span>
+                <span class="user-info__num">1</span>
+              </button>
+            </li>
+          </ul>
+          <button class="burger-menu" type="menu">
+            <span class="burger-menu__line"></span>
+            <span class="sr-only">Открыть меню</span>
+          </button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+<main class="main">
+
+  
+</main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__inner">
+          <a class="footer__logo logo" href="#header">
+            <img class="logo__svg" src="images/icons/icon-logo.svg" alt="логотип" width="200" height="39">
+          </a>
+          <form class="form-subscribe">
+            <label class="form-subscribe__label">
+              <span class="sr-only">форма для регистрации на сайте</span>
+              <input class="form-subscribe__input" type="email" placeholder="Ваш email" name="mail" required>
+            </label>
+            <button class="form-subscribe__btn main-btn animation-btn" type="submit">
+              <span class="sr-only">кнопка Подписаться</span>
+              <svg class="form-subscribe__btn-svg ">
+                <use xlink:href="images/sprite.svg#icon-btn"></use>
+              </svg>
+              Подписаться
+            </button>
+          </form>
+        </div>
+        <ul class="footer__menu">
+          <li class="footer__item">
+            <a class="footer__link add-animation" href="#">Как это работает</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link add-animation" href="#">О нас</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link add-animation" href="#">Скачать приложение</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link add-animation" href="#">Продукты</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link add-animation" href="#">Новости</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link add-animation" href="#">Блог</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link add-animation" href="#">Блюда</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link add-animation" href="#">Партнеры</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link add-animation" href="#">Что нового?</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link add-animation" href="#">Меню</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link add-animation" href="#">ЧаВо</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link add-animation" href="#">Карта сайта</a>
+          </li>
+        </ul>
+        <address class="contacts">
+          <ul class="contacts__adress">
+            <li class="contacts__item">
+              <a class="contacts__link add-animation" href="#">
+                <span class="sr-only">наш адрес</span>
+                <svg class="contacts__svg">
+                  <use xlink:href="images/sprite.svg#icon-location"></use>
+                </svg>
+                ул. Т.Г.Шевченко, 1
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a class="contacts__link add-animation" href="tel:380501112233">
+                <span class="sr-only">телефон для связи</span>
+                <svg class="contacts__svg">
+                  <use xlink:href="images/sprite.svg#icon-calling"></use>
+                </svg>
+                380501112233
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a class="contacts__link add-animation" href="mailto:support@sfood.com">
+                <span class="sr-only">адрес сайта техподдержки</span>
+                <svg class="contacts__svg">
+                  <use xlink:href="images/sprite.svg#icon-message"></use>
+                </svg>
+                support@sfood.com
+              </a>
+            </li>
+          </ul>
+          <ul class="socials-contacts">
+            <li class="socials-contacts__item">
+              <a class="socials-contacts__link icon-animation" href="#">
+                <span class="sr-only">ссылка для перехода в фэйсбук</span>
+                <svg class="socials-contacts__svg">
+                  <use xlink:href="images/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials-contacts__item">
+              <a class="socials-contacts__link icon-animation" href="#">
+                <span class="sr-only">ссылка для перехода в твиттер</span>
+                <svg class="socials-contacts__svg">
+                  <use xlink:href="images/sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials-contacts__item">
+              <a class="socials-contacts__link icon-animation" href="#">
+                <span class="sr-only">ссылка для перехода в инстаграмм</span>
+                <svg class="socials-contacts__svg">
+                  <use xlink:href="images/sprite.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </address>
+      </div>
+    </div>
+    <div class="footer__bottom">© 2022 Simple Food</div>
+  </footer>
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

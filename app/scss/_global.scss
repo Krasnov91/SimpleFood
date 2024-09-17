@@ -1,3 +1,8 @@
+html,
+body {
+  height: 100%;
+}
+
 body {
   @extend %rubik-400;
   font-size: 20px;
@@ -5,6 +10,8 @@ body {
   line-height: 1.5;
   color: $text;
   background-color: $main-bg;
+  display: flex;
+  flex-direction: column;
 
   &.lock {
 
@@ -26,6 +33,10 @@ body {
 
     }
   }
+}
+
+.main {
+  flex-grow: 1;
 }
 
 .container {
