@@ -36,6 +36,7 @@ function scripts() {
     'node_modules/jquery/dist/jquery.js',
     'node_modules/slick-carousel/slick/slick.js',
     'node_modules/nouislider/dist/nouislider.js',
+    'node_modules/swiper/swiper.js',
     'node_modules/mixitup/dist/mixitup.js',
     'app/js/main.js'
   ])

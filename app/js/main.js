@@ -55,6 +55,8 @@ $(function () {
     }
   });
 
+  
+
 });
 
 const rangeSlider = document.getElementById('rangeslider');
@@ -74,7 +76,7 @@ if (rangeSlider) {
   const inputto = document.getElementById('input-to');
   const inputs = [inputfrom, inputto];
 
-  rangeSlider.noUiSlider.on('update', function(values, handle){
+  rangeSlider.noUiSlider.on('update', function (values, handle) {
     inputs[handle].value = Math.round(values[handle]);
   });
 
@@ -94,5 +96,32 @@ if (rangeSlider) {
     });
   });
 }
+
+
+
+const swiper = new Swiper('.catalog__list', {
+  // Optional parameters
+  direction: 'vertical',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+
+
+
 
 var mixer = mixitup('.category-popular__inner');

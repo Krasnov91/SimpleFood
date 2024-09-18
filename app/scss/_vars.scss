@@ -58,6 +58,14 @@ $breakpoints: (
   background-position: center;
 }
 
+%checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+
 // %OpenSans-600 {
 //   font-family: 'OpenSans-SemiBold', sans-serif;
 //   font-weight: 600;

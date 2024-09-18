@@ -27,8 +27,8 @@
   },
   "dependencies": {
     "nouislider": "^15.8.1",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "swiper": "^11.1.14"
   }
-
   
 }
