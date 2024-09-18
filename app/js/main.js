@@ -45,9 +45,9 @@ $(function () {
     if ($(window).width() < 768) {
       $('.restaurants__wrap:not(.slick-initialized)').slick({
         arrows: false,
-        dots:true,
-        infinite:true,
-        speed:100,
+        dots: true,
+        infinite: true,
+        speed: 100,
         slidesToShow: 1
       });
     } else {
@@ -56,5 +56,43 @@ $(function () {
   });
 
 });
+
+const rangeSlider = document.getElementById('rangeslider');
+
+if (rangeSlider) {
+  noUiSlider.create(rangeSlider, {
+    start: [100, 1000],
+    connect: true,
+    step: 1,
+    range: {
+      'min': [0],
+      'max': [1200]
+    }
+  });
+
+  const inputfrom = document.getElementById('input-from');
+  const inputto = document.getElementById('input-to');
+  const inputs = [inputfrom, inputto];
+
+  rangeSlider.noUiSlider.on('update', function(values, handle){
+    inputs[handle].value = Math.round(values[handle]);
+  });
+
+  const setRangeSlider = (i, value) => {
+    let arr = [null, null];
+    arr[i] = value;
+
+    console.log(arr);
+
+    rangeSlider.noUiSlider.set(arr);
+  };
+
+  inputs.forEach((el, index) => {
+    el.addEventListener('change', (e) => {
+      console.log(index);
+      setRangeSlider(index, e.currentTarget.value);
+    });
+  });
+}
 
 var mixer = mixitup('.category-popular__inner');

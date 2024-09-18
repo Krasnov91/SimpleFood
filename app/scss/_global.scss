@@ -219,3 +219,41 @@ body {
     color: $white;
   }
 }
+
+.breadcrumbs {
+  background-color: rgba($active-btn, 0.1);
+  padding: 10px 0;
+  font-size: 14px;
+  line-height: 1.2;
+  color: $breadcrumbs;
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    position: relative;
+    padding: 14px 0;
+
+    &:not(:first-child) {
+      padding-left: 11px;
+
+      &::before {
+        @include pseudo;
+        background-image: url('../images/icons/chevron.svg');
+        @extend %bg-image;
+
+        width: 5.84px;
+        height: 10px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 7px;
+    }
+  }
+}

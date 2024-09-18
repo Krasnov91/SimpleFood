@@ -3,6 +3,7 @@
 @import 'vars';
 @import 'libs';
 @import 'mixin';
+@import 'range-slider';
 @import 'global';
 
 .header {
@@ -144,7 +145,7 @@
       border-bottom: 1px solid $border;
       margin-bottom: 15px;
       margin-right: 0;
-      
+
     }
   }
 
@@ -582,8 +583,8 @@
   transition: border-color 0.3s;
 
   @include mq('phone') {
-      padding: 20px 15px 17px;
-    }
+    padding: 20px 15px 17px;
+  }
 
   &:hover {
     border-color: $btn;
@@ -1083,8 +1084,8 @@
       left: 0;
 
       @include mq('phone') {
-          top: -8px;
-        }
+        top: -8px;
+      }
     }
 
     &::after {
@@ -1093,8 +1094,8 @@
       right: 0;
 
       @include mq('phone') {
-          bottom: 11px;
-        }
+        bottom: 11px;
+      }
     }
   }
 
@@ -1440,55 +1441,64 @@
       grid-auto-flow: row;
     }
 
-    &:nth-child(2){
+    &:nth-child(2) {
       @include mq('phone') {
-          grid-row: 5;
-        }
+        grid-row: 5;
+      }
     }
-    &:nth-child(3){
+
+    &:nth-child(3) {
       @include mq('phone') {
-          grid-row: 9;
-        }
+        grid-row: 9;
+      }
     }
-    &:nth-child(4){
+
+    &:nth-child(4) {
       @include mq('phone') {
-          grid-row: 2;
-        }
+        grid-row: 2;
+      }
     }
-    &:nth-child(5){
+
+    &:nth-child(5) {
       @include mq('phone') {
-          grid-row: 6;
-        }
+        grid-row: 6;
+      }
     }
-    &:nth-child(6){
+
+    &:nth-child(6) {
       @include mq('phone') {
-          grid-row: 10;
-        }
+        grid-row: 10;
+      }
     }
-    &:nth-child(7){
+
+    &:nth-child(7) {
       @include mq('phone') {
-          grid-row: 3;
-        }
+        grid-row: 3;
+      }
     }
-    &:nth-child(8){
+
+    &:nth-child(8) {
       @include mq('phone') {
-          grid-row: 7;
-        }
+        grid-row: 7;
+      }
     }
-    &:nth-child(9){
+
+    &:nth-child(9) {
       @include mq('phone') {
-          grid-row: 11;
-        }
+        grid-row: 11;
+      }
     }
-    &:nth-child(10){
+
+    &:nth-child(10) {
       @include mq('phone') {
-          grid-row: 4;
-        }
+        grid-row: 4;
+      }
     }
-    &:nth-child(11){
+
+    &:nth-child(11) {
       @include mq('phone') {
-          grid-row: 8;
-        }
+        grid-row: 8;
+      }
     }
   }
 
@@ -1661,5 +1671,153 @@
   &__svg {
     width: 20px;
     height: 20px;
+  }
+}
+
+.catalog {
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 10px;
+  }
+
+  &__item {
+    max-width: 210px;
+    width: 100%;
+  }
+
+  .filter {
+    margin-right: 30px;
+    max-width: 270px;
+    width: 100%;
+
+    &__item {
+      border: 1px solid $icon-bg;
+      border-radius: 5px;
+      background-color: $white;
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
+    &__btn {
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    &__title {
+      font-size: 24px;
+      font-weight: 400;
+      border-bottom: 1px solid $icon-bg;
+      padding: 15px;
+      line-height: 1.2;
+    }
+
+    &__inner {
+      padding: 25px 15px;
+    }
+
+    &__category {
+
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+
+    &__price {
+      display: flex;
+    }
+
+    &__price-level {
+      display: flex;
+    }
+  }
+
+  .filter-price {
+    &__wrap {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 25px;
+    }
+
+    &__label {
+      display: flex;
+      align-items: center;
+
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 1.2;
+      color: $decorate;
+    }
+
+    &__input {
+      max-width: 70px;
+      width: 100%;
+      margin: 0 5px;
+      background-color: $form-bg;
+      border: none;
+      border-radius: 3px;
+      padding: 12px;
+      font-size: 16px;
+
+
+
+    }
+
+    &__currency {
+      font-size: 16px;
+      line-height: 1.2;
+      color: $decorate;
+    }
+
+    &__slider {
+     padding-left: 15px;
+    }
+
+    .noUi-target {
+      border: none;
+      box-shadow: none;
+      background-color: $decorate;
+      height: 2px;
+    }
+
+    .noUi-connect {
+      background-color: $btn;
+    }
+
+    .noUi-handle {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      box-shadow: none;
+      border: none;
+      background-color: $btn;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
   }
 }
