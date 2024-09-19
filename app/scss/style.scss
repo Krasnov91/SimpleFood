@@ -1738,7 +1738,7 @@
   .jq-selectbox {
 
     &:not(:last-child) {
-      margin-right: 15px;
+      margin-right: 11px;
 
       @include mq('phone') {
         margin-right: 4px;
@@ -1782,7 +1782,7 @@
     }
 
     &__select-text {
-      padding: 15px 45px 15px 15px;
+      padding: 15px 45px 15px 11px;
 
       @include mq('phone') {
         padding: 14px 45px 15px 8px;
@@ -2151,8 +2151,12 @@
 }
 
 .discount {
-  margin-bottom: 20px;
-  
+  padding-bottom: 25px;
+
+  @include mq('phone') {
+    margin-bottom: 20px;
+  }
+
   &__title {
     margin-bottom: 60px;
     text-align: left;
