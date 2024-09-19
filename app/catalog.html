@@ -11,7 +11,6 @@
   <link rel="manifest" href="/site.webmanifest">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
-  <link rel="stylesheet" href="css/nouislider.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -20,6 +19,7 @@
     <div class="header__inner">
       <div class="container">
         <nav class="menu">
+          <div class="dark-bg"></div>
           <a class="logo header__logo" href="#header">
             <img class="logo__svg" src="images/icons/icon-logo.svg" alt="логотип" width="200" height="39">
           </a>
@@ -37,12 +37,12 @@
             </div>
             <ul class="menu__list">
               <li class="menu__item">
-                <a class="menu__link add-animation menu__link--active" href="#header">
+                <a class="menu__link add-animation" href="#header">
                   Главная
                 </a>
               </li>
               <li class="menu__item">
-                <a class="menu__link add-animation" href="#category">
+                <a class="menu__link add-animation menu__link--active" href="#category">
                   Блюда
                 </a>
               </li>
@@ -135,10 +135,8 @@
     </div>
   </header>
 
-
-
   <main class="main">
-    <section class="breadcrumbs">
+    <div class="breadcrumbs">
       <div class="container">
         <h2 class="sr-only">навигация по сайту</h2>
         <ul class="breadcrumbs__list">
@@ -148,30 +146,50 @@
             </a>
           </li>
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#">
+            <span class="breadcrumbs__link">
               Каталог товаров
-            </a>
+            </span>
           </li>
         </ul>
       </div>
-    </section>
+    </div>
     <section class="catalog section">
       <div class="container">
         <div class="catalog__top">
           <h2 class="catalog__title title">
             Каталог продуктов
           </h2>
-          <form class="catalog__form">
+          <div class="catalog__box">
+            <button class="catalog__menu">
+            </button>
+            <form class="catalog__form">
+              <select class="catalog__sorting">
+                <option class="catalog__option" value="">По названию</option>
+                <option class="catalog__option" value="">По названию</option>
+                <option class="catalog__option" value="">По названию</option>
+              </select>
+              <select class="catalog__sorting">
+                <option class="catalog__option" value="">по 12</option>
+                <option class="catalog__option" value="">по 12</option>
+                <option class="catalog__option" value="">по 12</option>
+              </select>
+            </form>
+          </div>
 
-          </form>
         </div>
         <div class="catalog__inner">
+          <div class="dark-theme"></div>
           <ul class="filter">
+            <button class="close-btn">
+              <svg class="close-btn__svg">
+                <use xlink:href="images/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
             <li class="filter__item">
               <h3 class="filter__title">Категории</h3>
               <ul class="filter__inner">
                 <li class="filter__category">
-                  <a class="filter__btn add-animation" href="#">Бургеры</a>
+                  <a class="filter__btn add-animation filter__btn--active" href="#">Бургеры</a>
                 </li>
                 <li class="filter__category">
                   <a class="filter__btn add-animation" href="#">Пицца</a>
@@ -225,117 +243,244 @@
                   <div class="filter-price__wrap">
                     <label class="filter-price__label">
                       <span class="filter-price__text">от</span>
-                      <input class="filter-price__input" min="100" max="1200" type="number" placeholder="000"
-                        id="input-from">
+                      <input class="filter-price__input filter-price__input--from" min="100" max="1200" type="number"
+                        placeholder="000" id="input-from">
                       <span class="filter-price__currency">₴</span>
                     </label>
                     <label class="filter-price__label">
                       <span class="filter-price__text">до</span>
-                      <input class="filter-price__input" min="100" max="1200" type="number" placeholder="000"
-                        id="input-to">
+                      <input class="filter-price__input filter-price__input--to" min="100" max="1200" type="number"
+                        placeholder="000" id="input-to">
                       <span class="filter-price__currency">₴</span>
                     </label>
                   </div>
-                  <div class="filter-price__slider" id="rangeslider"></div>
+                  <input class="filter-price__slider">
                 </form>
 
               </div>
             </li>
           </ul>
-          
-          <ul class="catalog__list">
-            <li class="catalog__item mix category-a">
-              <article class="product-card">
-                <img class="product-card__img" src="images/cards/category-a/card-1.png"
-                  alt="фото бургера с листьями салата" width="140" height="140">
-                <h3 class="product-card__title">Чизбургер с листьями салата</h3>
-                <span class="product-card__price">160 <span class="curency">грн.</span></span>
-                <button class="product-card__btn main-btn animation-btn" type="button">В корзину</button>
-              </article>
-            </li>
-            <li class="catalog__item mix category-a">
-              <article class="product-card">
-                <img class="product-card__img" src="images/cards/category-a/card-2.png" alt="фото бифбургера"
-                  width="140" height="140">
-                <h3 class="product-card__title">Бифбургер</h3>
-                <span class="product-card__price">190 <span class="curency">грн.</span></span>
-                <button class="product-card__btn main-btn animation-btn" type="button">В корзину</button>
-              </article>
-            </li>
-            <li class="catalog__item mix category-a">
-              <article class="product-card">
-                <img class="product-card__img" src="images/cards/category-a/card-3.png" alt="фото королевского бургера"
-                  width="140" height="140">
-                <h3 class="product-card__title">Королевский чизбургер</h3>
-                <span class="product-card__price">260 <span class="curency">грн.</span></span>
-                <button class="product-card__btn main-btn animation-btn" type="button">В корзину</button>
-              </article>
-            </li>
-            <li class="catalog__item mix category-a">
-              <article class="product-card">
-                <img class="product-card__img" src="images/cards/category-a/card-4.png" alt="фото черного бургера"
-                  width="140" height="140">
-                <h3 class="product-card__title">Черный гамбургер</h3>
-                <span class="product-card__price">199 <span class="curency">грн.</span></span>
-                <button class="product-card__btn main-btn animation-btn" type="button">В корзину</button>
-              </article>
-            </li>
-            <li class="catalog__item mix category-a">
-              <article class="product-card">
-                <img class="product-card__img" src="images/cards/category-a/card-5.png" alt="фото чикен-бургера"
-                  width="140" height="140">
-                <h3 class="product-card__title">Чикен бургер</h3>
-                <span class="product-card__price">180 <span class="curency">грн.</span></span>
-                <button class="product-card__btn main-btn animation-btn" type="button">В корзину</button>
-              </article>
-            </li>
-            <li class="catalog__item mix category-a">
-              <article class="product-card">
-                <img class="product-card__img" src="images/cards/category-a/card-6.png"
-                  alt="фото чизбургера с листьями салата" width="140" height="140">
-                <h3 class="product-card__title">Чизбургер с листьями салата</h3>
-                <span class="product-card__price">160 <span class="curency">грн.</span></span>
-                <button class="product-card__btn main-btn animation-btn" type="button">В корзину</button>
-              </article>
-            </li>
-            <li class="catalog__item mix category-a">
-              <article class="product-card">
-                <img class="product-card__img" src="images/cards/category-a/card-7.png" alt="фото бифбургера"
-                  width="140" height="140">
-                <h3 class="product-card__title">Бифбургер</h3>
-                <span class="product-card__price">190 <span class="curency">грн.</span></span>
-                <button class="product-card__btn main-btn animation-btn" type="button">В корзину</button>
-              </article>
-            </li>
-            <li class="catalog__item mix category-a">
-              <article class="product-card">
-                <img class="product-card__img" src="images/cards/category-a/card-8.png" alt="фото королевского бургера"
-                  width="140" height="140">
-                <h3 class="product-card__title">Королевский чизбургер</h3>
-                <span class="product-card__price">260 <span class="curency">грн.</span></span>
-                <button class="product-card__btn main-btn animation-btn" type="button">В корзину</button>
-              </article>
-            </li>
-            <li class="catalog__item mix category-a">
-              <article class="product-card">
-                <img class="product-card__img" src="images/cards/category-a/card-9.png" alt="фото черного бургера"
-                  width="140" height="140">
-                <h3 class="product-card__title">Черный гамбургер</h3>
-                <span class="product-card__price">199 <span class="curency">грн.</span></span>
-                <button class="product-card__btn main-btn animation-btn" type="button">В корзину</button>
-              </article>
-            </li>
-            <li class="catalog__item mix category-a">
-              <article class="product-card">
-                <img class="product-card__img" src="images/cards/category-a/card-10.png" alt="фото чикен-бургера"
-                  width="140" height="140">
-                <h3 class="product-card__title">Чикен бургер</h3>
-                <span class="product-card__price">180 <span class="curency">грн.</span></span>
-                <button class="product-card__btn main-btn animation-btn" type="button">В корзину</button>
-              </article>
-            </li>
-          </ul>
+          <div class="catalog__products">
+            <ul class="catalog__list">
+              <li class="catalog__item">
+                <article class="product-card">
+                  <img class="product-card__img" src="images/cards/category-a/card-1.png"
+                    alt="фото бургера с листьями салата" width="140" height="140">
+                  <h3 class="product-card__title">Чизбургер с листьями салата</h3>
+                  <span class="product-card__price">160 <span class="curency">грн.</span></span>
+                  <button class="product-card__btn main-btn animation-btn" type="button">В корзину</button>
+                </article>
+              </li>
+              <li class="catalog__item">
+                <article class="product-card">
+                  <img class="product-card__img" src="images/cards/category-a/card-2.png" alt="фото бифбургера"
+                    width="140" height="140">
+                  <h3 class="product-card__title">Бифбургер</h3>
+                  <span class="product-card__price">190 <span class="curency">грн.</span></span>
+                  <button class="product-card__btn main-btn animation-btn" type="button">В корзину</button>
+                </article>
+              </li>
+              <li class="catalog__item">
+                <article class="product-card">
+                  <img class="product-card__img" src="images/cards/category-a/card-3.png"
+                    alt="фото королевского бургера" width="140" height="140">
+                  <h3 class="product-card__title">Королевский чизбургер</h3>
+                  <span class="product-card__price">260 <span class="curency">грн.</span></span>
+                  <button class="product-card__btn main-btn animation-btn" type="button">В корзину</button>
+                </article>
+              </li>
+              <li class="catalog__item">
+                <article class="product-card">
+                  <img class="product-card__img" src="images/cards/category-a/card-4.png" alt="фото черного бургера"
+                    width="140" height="140">
+                  <h3 class="product-card__title">Черный гамбургер</h3>
+                  <span class="product-card__price">199 <span class="curency">грн.</span></span>
+                  <button class="product-card__btn main-btn animation-btn" type="button">В корзину</button>
+                </article>
+              </li>
+              <li class="catalog__item">
+                <article class="product-card">
+                  <img class="product-card__img" src="images/cards/category-a/card-5.png" alt="фото чикен-бургера"
+                    width="140" height="140">
+                  <h3 class="product-card__title">Чикен бургер</h3>
+                  <span class="product-card__price">180 <span class="curency">грн.</span></span>
+                  <button class="product-card__btn main-btn animation-btn" type="button">В корзину</button>
+                </article>
+              </li>
+              <li class="catalog__item">
+                <article class="product-card">
+                  <img class="product-card__img" src="images/cards/category-a/card-6.png"
+                    alt="фото чизбургера с листьями салата" width="140" height="140">
+                  <h3 class="product-card__title">Чизбургер с листьями салата</h3>
+                  <span class="product-card__price">160 <span class="curency">грн.</span></span>
+                  <button class="product-card__btn main-btn animation-btn" type="button">В корзину</button>
+                </article>
+              </li>
+              <li class="catalog__item">
+                <article class="product-card">
+                  <img class="product-card__img" src="images/cards/category-a/card-7.png" alt="фото бифбургера"
+                    width="140" height="140">
+                  <h3 class="product-card__title">Бифбургер</h3>
+                  <span class="product-card__price">190 <span class="curency">грн.</span></span>
+                  <button class="product-card__btn main-btn animation-btn" type="button">В корзину</button>
+                </article>
+              </li>
+              <li class="catalog__item">
+                <article class="product-card">
+                  <img class="product-card__img" src="images/cards/category-a/card-8.png"
+                    alt="фото королевского бургера" width="140" height="140">
+                  <h3 class="product-card__title">Королевский чизбургер</h3>
+                  <span class="product-card__price">260 <span class="curency">грн.</span></span>
+                  <button class="product-card__btn main-btn animation-btn" type="button">В корзину</button>
+                </article>
+              </li>
+              <li class="catalog__item">
+                <article class="product-card">
+                  <img class="product-card__img" src="images/cards/category-a/card-9.png" alt="фото черного бургера"
+                    width="140" height="140">
+                  <h3 class="product-card__title">Черный гамбургер</h3>
+                  <span class="product-card__price">199 <span class="curency">грн.</span></span>
+                  <button class="product-card__btn main-btn animation-btn" type="button">В корзину</button>
+                </article>
+              </li>
+              <li class="catalog__item">
+                <article class="product-card">
+                  <img class="product-card__img" src="images/cards/category-a/card-10.png" alt="фото чикен-бургера"
+                    width="140" height="140">
+                  <h3 class="product-card__title">Чикен бургер</h3>
+                  <span class="product-card__price">180 <span class="curency">грн.</span></span>
+                  <button class="product-card__btn main-btn animation-btn" type="button">В корзину</button>
+                </article>
+              </li>
+              <li class="catalog__item">
+                <article class="product-card">
+                  <img class="product-card__img" src="images/cards/category-a/card-10.png" alt="фото чикен-бургера"
+                    width="140" height="140">
+                  <h3 class="product-card__title">Чикен бургер</h3>
+                  <span class="product-card__price">180 <span class="curency">грн.</span></span>
+                  <button class="product-card__btn main-btn animation-btn" type="button">В корзину</button>
+                </article>
+              </li>
+              <li class="catalog__item">
+                <article class="product-card">
+                  <img class="product-card__img" src="images/cards/category-a/card-10.png" alt="фото чикен-бургера"
+                    width="140" height="140">
+                  <h3 class="product-card__title">Чикен бургер</h3>
+                  <span class="product-card__price">180 <span class="curency">грн.</span></span>
+                  <button class="product-card__btn main-btn animation-btn" type="button">В корзину</button>
+                </article>
+              </li>
+            </ul>
+            <ul class="navigation">
+              <li class="navigation__item">
+                <span class="navigation__arrow">
+                  <svg class="navigation__svg navigation__svg--prev">
+                    <use xlink:href="images/sprite.svg#chevron"></use>
+                  </svg>
+                </span>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link navigation__link--active">1</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">2</a>
+              </li>
+              <li class="navigation__item">
+                <span class="navigation__dots">...</span>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">9</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">10</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link navigation__arrow navigation__arrow--active" href="#">
+                  <svg class="navigation__svg navigation__svg--next">
+                    <use xlink:href="images/sprite.svg#chevron"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <section class="download section">
+      <div class="container">
+        <div class="download__inner df">
+          <div class="download__content">
+            <h2 class="download__title title">
+              Скачайте мобильное приложение
+            </h2>
+            <p class="download__text">
+              Рестораны, которые вы любите - в ваших руках. Устанавливайте приложение и заказывайте еду в любом удобном
+              месте.
+            </p>
+            <ul class="download__sources">
+              <li class="download__item">
+                <a class="download__link" href="#">
+                  <span class="sr-only">ссылка для скачивания через эплстор</span>
+                  <img class="download__svg" src="images/appstore.svg" alt="ссылка для скачивания через эплстор"
+                    width="120" height="40">
+                </a>
+              </li>
+              <li class="download__item">
+                <a class="download__link" href="#">
+                  <span class="sr-only">ссылка для скачивания через гуглплэй</span>
+                  <img class="download__svg" src="images/googleplay.svg" alt="ссылка для скачивания через гуглплэй"
+                    width="135" height="40">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="download__img" style="background-image: url('images/download.jpg');"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="discount section">
+      <div class="container">
+        <h2 class="discount__title title">
+          Акции и скидки
+        </h2>
+        <ul class="discount__wrap">
+          <li class="discount__item">
+            <article class="restaurants-card">
+              <img class="restaurants-card__img" src="images/reataurants-cards/blaze-pizza.png"
+                alt="фото пиццы из ресторана блэйз" width="370" height="300">
+              <div class="restaurants-card__inner">
+                <h3 class="restaurants-card__title">
+                  Скидка 50% на вторую пиццу
+                </h3>
+              </div>
+            </article>
+          </li>
+          <li class="discount__item">
+            <article class="restaurants-card">
+              <img class="restaurants-card__img" src="images/reataurants-cards/kfc.png"
+                alt="фото пиццы из ресторана блэйз" width="370" height="300">
+              <div class="restaurants-card__inner">
+                <h3 class="restaurants-card__title">
+                  Картошечка из KFC даром при заказе бургера
+                </h3>
+              </div>
+            </article>
+          </li>
+          <li class="discount__item">
+            <article class="restaurants-card">
+              <img class="restaurants-card__img" src="images/reataurants-cards/star-burgers.png"
+                alt="фото пиццы из ресторана блэйз" width="370" height="300">
+              <div class="restaurants-card__inner">
+                <h3 class="restaurants-card__title">
+                  Чёрные бургеры на чёрный день
+                </h3>
+              </div>
+            </article>
+          </li>
+
+        </ul>
       </div>
     </section>
   </main>

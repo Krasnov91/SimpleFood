@@ -1,18 +1,55 @@
 $(function () {
 
-  $('.burger-menu, .menu__close').on('click', function () {
-    $('.menu__mobile').toggleClass('menu__mobile--active');
-    $('.burger-menu').toggleClass('burger-menu--active');
-    $('body').toggleClass('lock');
+  $('.catalog__sorting').styler();
+
+  $('.burger-menu').on('click', function () {
+    $('.menu__mobile').addClass('menu__mobile--active');
+    $('.burger-menu').addClass('burger-menu--active');
+    $('.dark-bg').addClass('dark-bg--active');
+    $('body').addClass('lock');
+  });
+
+  $('.menu__close').on('click', function () {
+    $('.menu__mobile').removeClass('menu__mobile--active');
+    $('.burger-menu').removeClass('burger-menu--active');
+    $('.dark-bg').removeClass('dark-bg--active');
+    $('body').removeClass('lock');
   });
 
   document.addEventListener('click', function (e) {
-    if (e.target !== burger && e.target !== mobileMenu) {
-      burger.classList.remove('burger-menu--active');
-      mobileMenu.classList.remove('menu__mobile--active');
-      bodyLock.classList.remove('lock');
+    const $burgerBtns = $(".burger-menu, .menu__mobile");
+    if (!$burgerBtns.is(e.target) && $burgerBtns.has(e.target).length === 0) {
+      $('.menu__mobile').removeClass('menu__mobile--active');
+      $('.burger-menu').removeClass('burger-menu--active');
+      $('.dark-bg').removeClass('dark-bg--active');
+      $('body').removeClass('lock');
     }
   });
+
+  $('.catalog__menu').on('click', function () {
+    $('.filter').addClass('filter--active');
+    $('.catalog__menu').addClass('catalog__menu--active');
+    $('.dark-theme').addClass('dark-theme--active');
+    $('body').addClass('lock');
+  });
+
+  $('.close-btn').on('click', function () {
+    $('.filter').removeClass('filter--active');
+    $('.catalog__menu').removeClass('catalog__menu--active');
+    $('.dark-theme').removeClass('dark-theme--active');
+    $('body').removeClass('lock');
+  });
+
+  document.addEventListener('click', function (e) {
+    const $burgerBtns = $(".catalog__menu, .filter");
+    if (!$burgerBtns.is(e.target) && $burgerBtns.has(e.target).length === 0) {
+      $('.filter').removeClass('filter--active');
+      $('.catalog__menu').removeClass('catalog__menu--active');
+      $('.dark-theme').removeClass('dark-theme--active');
+      $('body').removeClass('lock');
+    }
+  });
+
 
   $(".header__link, .logo").on("click", function (e) {
     e.preventDefault();
@@ -55,70 +92,103 @@ $(function () {
     }
   });
 
-  
+  $(window).on('load resize', function () {
+    if ($(window).width() < 990) {
+      $('.discount__wrap:not(.slick-initialized)').slick({
+        arrows: true,
+        dots: true,
+        infinite: true,
+        speed: 1000,
+        responsive: [
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 2
+            }
+          },
+          {
+            breakpoint: 700,
+            settings: {
+              slidesToShow: 1
+            }
+          }
+        ],
 
-});
-
-const rangeSlider = document.getElementById('rangeslider');
-
-if (rangeSlider) {
-  noUiSlider.create(rangeSlider, {
-    start: [100, 1000],
-    connect: true,
-    step: 1,
-    range: {
-      'min': [0],
-      'max': [1200]
+        prevArrow: '<button type="button" class="slick-arrow slick-prev"><svg class="slick-arrow__svg"><use xlink:href="images/sprite.svg#icon-arrow"></use></svg></button>',
+        nextArrow: '<button type="button" class="slick-arrow slick-next"><svg class="slick-arrow__svg"><use xlink:href="images/sprite.svg#icon-arrow"></use></svg></button>',
+      });
+    } else {
+      $(".discount__wrap.slick-initialized").slick("unslick");
     }
   });
 
-  const inputfrom = document.getElementById('input-from');
-  const inputto = document.getElementById('input-to');
-  const inputs = [inputfrom, inputto];
+  var $range = $(".filter-price__slider");
+  var $inputFrom = $(".filter-price__input--from");
+  var $inputTo = $(".filter-price__input--to");
+  var instance;
+  var min = 0;
+  var max = 1200;
+  var from = 0;
+  var to = 0;
 
-  rangeSlider.noUiSlider.on('update', function (values, handle) {
-    inputs[handle].value = Math.round(values[handle]);
+  $range.ionRangeSlider({
+    skin: "round",
+    type: "double",
+    min: min,
+    max: max,
+    from: 200,
+    to: 800,
+    onStart: updateInputs,
+    onChange: updateInputs,
+    onFinish: updateInputs
   });
+  instance = $range.data("ionRangeSlider");
 
-  const setRangeSlider = (i, value) => {
-    let arr = [null, null];
-    arr[i] = value;
+  function updateInputs(data) {
+    from = data.from;
+    to = data.to;
 
-    console.log(arr);
+    $inputFrom.prop("value", from);
+    $inputTo.prop("value", to);
+  }
 
-    rangeSlider.noUiSlider.set(arr);
-  };
+  $inputFrom.on("change", function () {
+    var val = $(this).prop("value");
 
-  inputs.forEach((el, index) => {
-    el.addEventListener('change', (e) => {
-      console.log(index);
-      setRangeSlider(index, e.currentTarget.value);
+    // validate
+    if (val < min) {
+      val = min;
+    } else if (val > to) {
+      val = to;
+    }
+
+    instance.update({
+      from: val
     });
+
+    $(this).prop("value", val);
+
   });
-}
+
+  $inputTo.on("change", function () {
+    var val = $(this).prop("value");
+
+    // validate
+    if (val < from) {
+      val = from;
+    } else if (val > max) {
+      val = max;
+    }
+
+    instance.update({
+      to: val
+    });
+
+    $(this).prop("value", val);
+  });
 
 
 
-const swiper = new Swiper('.catalog__list', {
-  // Optional parameters
-  direction: 'vertical',
-  loop: true,
-
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
 });
 
 

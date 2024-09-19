@@ -220,12 +220,31 @@ body {
   }
 }
 
+.dark-bg {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100vw;
+  background-color: rgba(black, 0.3);
+  bottom: 0;
+  transform: translateX(-200%);
+}
+
+.dark-bg--active {
+  transform: translateX(0);
+}
+
 .breadcrumbs {
   background-color: rgba($active-btn, 0.1);
   padding: 10px 0;
   font-size: 14px;
   line-height: 1.2;
   color: $breadcrumbs;
+
+  @include mq('phone') {
+      margin-bottom: 20px;
+    }
 
   &__list {
     display: flex;
